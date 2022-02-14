@@ -12,7 +12,7 @@ project(libspeexdsp VERSION ${SPEEX_VERSION_MAJOR}.${SPEEX_VERSION_MINOR}.${SPEE
 
 set(CMAKE_DEBUG_POSTFIX "d")
 
-set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/")
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake/)
 
 include(CheckIncludeFile)
 include(CheckSymbolExists)
