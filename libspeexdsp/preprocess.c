@@ -1171,6 +1171,9 @@ EXPORT int speex_preprocess_ctl(SpeexPreprocessState *state, int request, void *
    case SPEEX_PREPROCESS_GET_AGC_LOUDNESS:
       (*(spx_int32_t*)ptr) = pow(st->loudness, 1.0/LOUDNESS_EXP);
       break;
+   case SPEEX_PREPROCESS_SET_AGC_GAIN:
+      st->agc_gain = exp(*(spx_int32_t*)ptr / 8.6858);
+      break;
    case SPEEX_PREPROCESS_GET_AGC_GAIN:
       (*(spx_int32_t*)ptr) = floor(.5+8.6858*log(st->agc_gain));
       break;

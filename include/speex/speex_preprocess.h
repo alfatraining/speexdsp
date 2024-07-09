@@ -182,7 +182,8 @@ int speex_preprocess_ctl(SpeexPreprocessState *st, int request, void *ptr);
 /** Get loudness */
 #define SPEEX_PREPROCESS_GET_AGC_LOUDNESS 33
 
-/*  Can't set gain */
+/*  alfatraining custom: set gain */
+#define SPEEX_PREPROCESS_SET_AGC_GAIN 34
 /** Get current gain (int32 percent) */
 #define SPEEX_PREPROCESS_GET_AGC_GAIN 35
 
